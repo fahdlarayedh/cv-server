@@ -11,8 +11,8 @@ router.post('/script', async (req, res) => {
     console.log('script:');
     //const python = spawn('python',['--version']); 
     const spawn = require("child_process").spawn;
-    const python = spawn('python', [`${process.cwd()}\\routes\\script.py`]); // windows
-    //const python = spawn('python', [`${process.cwd()}/routes/script.py`]); //mac ou bien linux
+    //const python = spawn('python', [`${process.cwd()}\\routes\\script.py`]); // windows
+    const python = spawn('python', [`${process.cwd()}/routes/script.py`]); //mac ou bien linux
 
     python.stdin.write(JSON.stringify(req.body));
     python.stdin.end();
@@ -36,7 +36,7 @@ router.post('/script', async (req, res) => {
       //pyJsonRespData = JSON.parse(buffers.toString());
       //console.log(buffers.toString());
       //res.status(200).json({ message: "All Done", Detection: pyJsonRespData.Detection, RednessPerc: pyJsonRespData.RednessPerc, Image1: pyJsonRespData.Image1 });
-      res.status(200).json({ message: "All Done", test: pyJsonRespData.test, detection: pyJsonRespData.detection });
+      res.status(200).json({ message: "All Done", test: pyJsonRespData.test, detection: pyJsonRespData.detection, evaxData: pyJsonRespData.evaxData , qrCodeData: pyJsonRespData.qrCodeData });
 
     });
 
