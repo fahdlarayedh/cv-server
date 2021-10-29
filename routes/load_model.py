@@ -100,21 +100,6 @@ def launch(evax_img):
     "nodeId":cleanResult[4][1]
   }
 
-  x= {
-    "name": "FAHD LARAYEDH",
-    "idNumber": "07492285",
-    "lotVaccin1": "025D21A",
-    "lotVaccin2": "025D21A",
-    "dateOfBirth": "1998-06-06",
-    "vaccinType": "MODERNA",
-    "vaccin1Date":"2021-08-15T14:00:00.000+0100",
-    "vaccin2Date":"2021-09-11T12:30:00.000+0100",
-    "vaccinationCenter1":"Lycée Menzah 6",
-    "vaccinationCenter2":"Lycée Menzah 6",
-    "nodeId":"ZiuChCvSCfaJR4SY5DvhAyZjweHLXotRNbXxjeAFqeD"
-  }
-
-
   global evaxData
   evaxData = json.dumps(xt)
 
